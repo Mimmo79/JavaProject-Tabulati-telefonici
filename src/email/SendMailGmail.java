@@ -28,8 +28,8 @@ public class SendMailGmail {
     
 //    public static void main(String[] args) {
 //
-//	final String username = "massimo.sensi@romagnaforlivese.com";
-//		final String password = "BmwGs1200";
+//	final String username = "massimo.com";
+//		final String password = "****";
 //
 //		Properties props = new Properties();
 //		props.put("mail.smtp.auth", "true");
@@ -47,9 +47,9 @@ public class SendMailGmail {
 //		try {
 //
 //			Message message = new MimeMessage(session);
-//			message.setFrom(new InternetAddress("massimo.sensi@romagnaforlivese.com"));
+//			message.setFrom(new InternetAddress("massimo@com"));
 //			message.setRecipients(Message.RecipientType.TO,
-//				InternetAddress.parse("giuliana.scaioli@comune.forli.fc.it"));
+//				InternetAddress.parse("giuliana@it"));
 //			message.setSubject("Prova invio mail");
 //			message.setText("Dear Mail Crawler,"
 //				+ "\n\n No spam to my email, please!");
@@ -102,7 +102,7 @@ public class SendMailGmail {
 		getMailSession = Session.getDefaultInstance(mailServerProperties, null);
 		generateMailMessage = new MimeMessage(getMailSession);
 		generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress("giuliana.scaioli@comune.forli.fc.it"));
-		//generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress("massimo.sensi@romagnaforlivese.com"));
+		//generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress("massimo@com"));
 		generateMailMessage.setSubject("Greetings from Crunchify..");
 		String emailBody = "Test email by Crunchify.com JavaMail API example. " + "<br><br> Regards, <br>Crunchify Admin";
 		generateMailMessage.setContent(emailBody, "text/html");
@@ -114,7 +114,7 @@ public class SendMailGmail {
  
 		// Enter your correct gmail UserID and Password
 		// if you have 2FA enabled then provide App Specific Password
-		transport.connect("smtp.gmail.com", "massimo.sensi@romagnaforlivese.com", "BmwGs1200");
+		transport.connect("smtp.gmail.com", "massimo@.com", "*****");
 		transport.sendMessage(generateMailMessage, generateMailMessage.getAllRecipients());
 		transport.close();
 	}

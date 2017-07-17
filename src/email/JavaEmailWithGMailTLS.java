@@ -8,22 +8,15 @@ import java.util.Date;
 import java.util.Properties;
 
 public class JavaEmailWithGMailTLS {
-    private static final String USERNAME = "sistinfo_applicativi@romagnaforlivese.it";
-    private static final String PASSWORD = "0d694b4985+";
+    private static final String USERNAME = "***";
+    private static final String PASSWORD = "***";
 
     public static void main(String[] args) throws Exception {
         // Email information such as from, to, subject and contents.
-        String mailFrom = "sistinfo_applicativi@romagnaforlivese.it";
-        String mailTo = "camillo.acerbi@romagnaforlivese.it";
+        String mailFrom = "sistinfo_applicativi@***it";
+        String mailTo = "camill@***it";
         String mailSubject = "Email test -Tabulati telefonia mobile (Java + TLS-Gmail) ";
-        String mailText = "Ciao Camillo,\r"
-                + "ho fatto alcune modifiche e direi che la parte mail funziona direttamente su server gmail con autenticazione TLS.\r"
-                + "A questo punto, seguendo l'approccio ipotizzato ieri, mi basterebbe conoscere "
-                + "il percorso di rete in cui salvare i dati e la modalità da utilizzare "
-                + "per la formattazione dei nomi nei files.\r"
-                + "\r"
-                + "Ciao\r"
-                + "Massimo";
+        String mailText = "Ciao bla bla";
 
         JavaEmailWithGMailTLS gmail = new JavaEmailWithGMailTLS();
         gmail.sendMail(mailFrom, mailTo, mailSubject, mailText);

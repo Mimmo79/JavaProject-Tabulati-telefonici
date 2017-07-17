@@ -31,17 +31,17 @@ import javax.mail.internet.MimeMultipart;
 public class SendAttachmentInEmail {
    public static void main(String[] args) {
       // Recipient's email ID needs to be mentioned.
-      String to = "giuliana.scaioli@comune.forli.fc.it";
+      String to = "giuliana@it";
 
       // Sender's email ID needs to be mentioned
-      String from = "massimo.sensi@gmail.com";
+      String from = "massimo@gmail.com";
 
       final String username = "manishaspatil";//change accordingly
       final String password = "******";//change accordingly
 
       // Assuming you are sending email through relay.jangosmtp.net
       //String host = "relay.jangosmtp.net";
-      String host = "smtp.comune.forli.fc.it";
+      String host = "smtp.co***.it";
 
       Properties props = new Properties();
       //props.put("mail.smtp.auth", "true");
@@ -87,7 +87,7 @@ public class SendAttachmentInEmail {
 
          // Part two is attachment
          messageBodyPart = new MimeBodyPart();
-         String filename = "c:/102-3291715944-SAMORI' SARA.txt";
+         String filename = "c:/***txt";
          DataSource source = new FileDataSource(filename);
          messageBodyPart.setDataHandler(new DataHandler(source));
          messageBodyPart.setFileName(filename);
